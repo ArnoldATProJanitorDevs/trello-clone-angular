@@ -11,7 +11,7 @@ import { CardComponent } from './card/card.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EditTalkComponent } from './edit-talk/edit-talk.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { DeleteTalkComponent } from './delete-talk/delete-talk.component';
+import { DeleteCardComponent } from './delete-card/delete-card.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -37,7 +37,7 @@ import { ListComponent } from './list/list.component';
     DrawerComponent,
     CardComponent,
     EditTalkComponent,
-    DeleteTalkComponent,
+    DeleteCardComponent,
     ColorPickerDialogComponent,
     ListComponent
   ],
@@ -67,7 +67,7 @@ import { ListComponent } from './list/list.component';
     ColorChromeModule
   ],
   providers: [],
-  entryComponents: [EditTalkComponent, DeleteTalkComponent],
+  entryComponents: [EditTalkComponent, DeleteCardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

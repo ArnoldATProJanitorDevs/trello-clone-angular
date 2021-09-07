@@ -3,7 +3,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef, MatDialog} from '@angular/material/dialog';
 import { ColorPickerDialogComponent } from '../shared/components/color-picker-dialog/color-picker-dialog.component';
-import { IssueType, Talk } from '../shared/models/schema.model';
+import { IssueType, Card } from '../shared/models/schema.model';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { appConstants } from '../shared/appConstants';
 
@@ -17,7 +17,7 @@ export class EditTalkComponent implements OnInit {
   formGroup: FormGroup;
   issueTypesArrayWithColor = Object.values(appConstants.issueTypeListWithColor);
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: {talk: Talk, edit: boolean},
+    @Inject(MAT_DIALOG_DATA) public data: {talk: Card, edit: boolean},
     private dialogRef: MatDialogRef<EditTalkComponent>,
     public formBuilder: FormBuilder,
     public colorPickerdialog: MatDialog

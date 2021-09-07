@@ -2,7 +2,7 @@ export interface Tag {
     name: string;
     color?: string;
 }
-export interface Talk {
+export interface Card {
     text: string;
     speaker?: string;
     tags?: Tag[];
@@ -24,13 +24,13 @@ export enum IssueType {
     Story = 'story'
 }
 
-export interface Track {
+export interface List {
     title: string;
-    talks: Talk[];
+    cards: Card[];
     id: string;
 }
 
 export interface Board {
     title: string;
-    tracks: Track[];
+    lists: List[];
 }

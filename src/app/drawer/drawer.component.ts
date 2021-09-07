@@ -16,7 +16,7 @@ export class DrawerComponent {
     private breakpointObserver: BreakpointObserver,
     private boardService: BoardService
   ) {
-    this.boards = boardService.getBoards();
+    this.boards = boardService.getBoard();
   }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
