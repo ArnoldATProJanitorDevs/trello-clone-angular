@@ -9,7 +9,7 @@ import { DrawerComponent } from './drawer/drawer.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CardComponent } from './card/card.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { EditTalkComponent } from './edit-talk/edit-talk.component';
+import { EditCardComponent } from './edit-card/edit-card.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DeleteCardComponent } from './delete-card/delete-card.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -36,7 +36,7 @@ import { ListComponent } from './list/list.component';
     AppComponent,
     DrawerComponent,
     CardComponent,
-    EditTalkComponent,
+    EditCardComponent,
     DeleteCardComponent,
     ColorPickerDialogComponent,
     ListComponent
@@ -67,7 +67,7 @@ import { ListComponent } from './list/list.component';
     ColorChromeModule
   ],
   providers: [],
-  entryComponents: [EditTalkComponent, DeleteCardComponent],
+  entryComponents: [EditCardComponent, DeleteCardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

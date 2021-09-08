@@ -8,31 +8,31 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { appConstants } from '../shared/appConstants';
 
 @Component({
-  selector: 'app-edit-talk',
-  templateUrl: './edit-talk.component.html',
-  styleUrls: ['./edit-talk.component.scss']
+  selector: 'app-edit-card',
+  templateUrl: './edit-card.component.html',
+  styleUrls: ['./edit-card.component.scss']
 })
-export class EditTalkComponent implements OnInit {
+export class EditCardComponent implements OnInit {
 
   formGroup: FormGroup;
   issueTypesArrayWithColor = Object.values(appConstants.issueTypeListWithColor);
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: {talk: Card, edit: boolean},
-    private dialogRef: MatDialogRef<EditTalkComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: {card: Card, edit: boolean},
+    private dialogRef: MatDialogRef<EditCardComponent>,
     public formBuilder: FormBuilder,
     public colorPickerdialog: MatDialog
   ) {
   }
 
   ngOnInit() {
-    const talk = this.data && this.data.talk ? this.data.talk : null;
+    const card = this.data && this.data.card ? this.data.card : null;
     this.formGroup = this.formBuilder.group({
-      text: [talk && talk.text ? talk.text : '', Validators.required],
-      speaker: [talk && talk.speaker ? talk.speaker : '', Validators.required],
-      image: [talk && talk.image ? talk.image : ''],
-      tags: [talk && talk.tags ? talk.tags : []],
-      issueType: [talk && talk.issueType ? talk.issueType : ''],
-      createdAt: [talk && talk.createdAt ? talk.createdAt : new Date()]
+      text: [card && card.text ? card.text : '', Validators.required],
+      speaker: [card && card.speaker ? card.speaker : '', Validators.required],
+      image: [card && card.image ? card.image : ''],
+      tags: [card && card.tags ? card.tags : []],
+      issueType: [card && card.issueType ? card.issueType : ''],
+      createdAt: [card && card.createdAt ? card.createdAt : new Date()]
     });
   }
 
@@ -75,8 +75,5 @@ export class EditTalkComponent implements OnInit {
       }
     });
   }
-
-
-
 }
 

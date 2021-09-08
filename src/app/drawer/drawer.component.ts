@@ -11,7 +11,7 @@ import { Board } from '../shared/models/schema.model';
   styleUrls: ['./drawer.component.scss'],
 })
 export class DrawerComponent {
-  boards: Board[];
+  boards: Board;
   constructor(
     private breakpointObserver: BreakpointObserver,
     private boardService: BoardService

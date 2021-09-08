@@ -1,8 +1,8 @@
 $dialog-default-padding: 24px;
-$edit-talk-dialog-width: 500px;
+$edit-card-dialog-width: 500px;
 
 img {
-  width: $edit-talk-dialog-width;
+  width: $edit-card-dialog-width;
 
   // Shift the image to ignore the default margin of the dialog. We want to
   // show the talk image as a full-width dialog header.

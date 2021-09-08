@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import {Board, Card, List} from '../shared/models/schema.model';
-import {EditTalkComponent} from '../edit-talk/edit-talk.component';
+import {EditCardComponent} from '../edit-card/edit-card.component';
 import {DeleteCardComponent} from '../delete-card/delete-card.component';
 import {BoardService} from '../board.service';
 import {MatDialog} from '@angular/material/dialog';
@@ -26,7 +26,7 @@ export class ListComponent implements OnInit {
    * track talks. This property can be used to connect all drop lists together.
    */
   trackIds(boardIndex): string[] {
-    return this.board[boardIndex].tracks.map(track => track.id);
+    return this.board.lists.map(card => card.id);
   }
 
   onCardDrop(event: CdkDragDrop<Card[]>) {
@@ -48,12 +48,18 @@ export class ListComponent implements OnInit {
   }
 
   addEditCard(card: Card, list: List, edit = false) {
-    // Use the injected dialog service to launch the previously created edit-talk
+    // Use the injected dialog service to launch the previously created edit-card
     // component. Once the dialog closes, we assign the updated talk data to
     // the specified talk.
-    this._dialog.open(EditTalkComponent, {data: {talk: card, edit}, width: '500px'})
+    this._dialog.open(EditCardComponent, {data: {card: card, edit}, width: '500px'})
       .afterClosed()
-      .subscribe(newTalkData => edit ? Object.assign(card, newTalkData) : list.cards.unshift(newTalkData));
+      .subscribe(newCardData => {
+          if (!newCardData) {
+            return;
+          }
+          edit ? Object.assign(card, newCardData) : list.cards.push(newCardData);
+        }
+      );
   }
 
   deleteCard(card: Card, list: List) {
