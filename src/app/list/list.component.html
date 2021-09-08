@@ -30,6 +30,7 @@
 
     <div *ngIf="!list['collapsed']" class="card-list-content" cdkDropList [id]="list.id"
          [cdkDropListData]="list.cards"
+         [cdkDropListConnectedTo]="trackIds(listIndex)"
          (cdkDropListDropped)="onCardDrop($event)">
 
       <app-card *ngFor="let card of list.cards" [text]="card.text" [createdAt]="card?.createdAt" [tags]="card.tags"
@@ -43,7 +44,7 @@
 
     <!-- footer of list -->
     <div fxLayout="row" fxLayoutAlign="baseline baseline">
-      <button style="width: fit-content;" class="add-talk" (click)="addEditCard(list, list)" color="primary"
+      <button style="width: fit-content;" class="add-card" (click)="addEditCard(list, list)" color="primary"
               mat-raised-button>Add card
       </button>
       <span fxFlex style="text-align: right; cursor: pointer;"
