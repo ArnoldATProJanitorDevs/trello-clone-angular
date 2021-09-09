@@ -1,9 +1,9 @@
 {
-  "title": "Day one",
+  "title": "Weekly Board",
   "lists": [
     {
-      "id": "list-one",
-      "title": "List one",
+      "id": "mon",
+      "title": "Monday",
       "cards": [
         {
           "issueType": "epic",
@@ -87,8 +87,8 @@
       ]
     },
     {
-      "id": "list-two",
-      "title": "List two",
+      "id": "tue",
+      "title": "Tuesday",
       "cards": [
         {
           "issueType": "bug",
@@ -178,8 +178,8 @@
       ]
     },
     {
-      "id": "mini-workshops",
-      "title": "Mini workshops",
+      "id": "wed",
+      "title": "Wednesday",
       "cards": [
         {
           "issueType": "task",
@@ -203,8 +203,8 @@
       ]
     },
     {
-      "id": "office-hours",
-      "title": "Office hours",
+      "id": "thu",
+      "title": "Thursday",
       "cards": [
         {
           "issueType": "task",
@@ -230,8 +230,8 @@
       ]
     },
     {
-      "id": "qa-panels",
-      "title": "Q&A panels",
+      "id": "fri",
+      "title": "Friday",
       "cards": [
         {
           "issueType": "task",
@@ -253,6 +253,38 @@
           "image": "https://pbs.twimg.com/media/DoHCNnlUUAUWfhG.jpg"
         }
       ]
+    },
+    {
+      "id": "sat",
+      "title": "Saturday",
+      "cards": [
+        {
+          "issueType": "task",
+          "text": "Stefan Baumgartner, Michael Hladky, Katrin Freihofner, Igor Minar",
+          "createdAt": "2019-10-01T09:26:05.026Z"
+        },
+        {
+          "issueType": "task",
+          "text": "Ana Cidre, Sam Julien, Sherry List, Noël Macé, Michael Ryan",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/640px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg",
+          "createdAt": "2019-10-01T09:26:05.026Z"
+        },
+        {
+          "issueType": "task",
+          "text": "Sani Yusuf, Craig Spence, Maxim Salnikov, Olivier Combe, Misko Hevery",
+          "createdAt": "2019-11-01T09:26:05.026Z"
+        },
+        {
+          "issueType": "task",
+          "text": "Erin Coughlan, Martin Probst, Max Koretskyi, Bo Vandersteene",
+          "createdAt": "2019-12-01T09:26:05.026Z"
+        }
+      ]
+    },
+    {
+      "id": "fin",
+      "title": "Finished",
+      "cards": []
     }
   ]
 }

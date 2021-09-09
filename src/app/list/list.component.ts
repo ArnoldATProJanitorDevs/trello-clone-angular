@@ -5,6 +5,8 @@ import {EditCardComponent} from '../edit-card/edit-card.component';
 import {DeleteCardComponent} from '../delete-card/delete-card.component';
 import {BoardService} from '../board.service';
 import {MatDialog} from '@angular/material/dialog';
+import {DateService} from '../shared/services/date.service';
+
 
 @Component({
   selector: 'app-list',
@@ -14,12 +16,29 @@ import {MatDialog} from '@angular/material/dialog';
 export class ListComponent implements OnInit {
   board: Board = undefined;
 
-  constructor(private _boardService: BoardService, private _dialog: MatDialog) {
+  constructor(private _boardService: BoardService,
+              private _dialog: MatDialog,
+              public dateService: DateService,
+  ) {
     this.board = this._boardService.getBoard();
   }
 
   ngOnInit(): void {
+    this.addDateEachDay(this.dateService.getDaysOfWeek(new Date()));
   }
+
+  addDateEachDay(daysOfWeek: any[]) {
+
+    this.board.lists = this.board.lists.map((x,i) => {
+       return {
+          cards: x.cards,
+          id: x.id,
+          title:  i < daysOfWeek.length - 1 ? daysOfWeek[i] : x.title
+        } as List;
+      }
+    );
+  }
+
 
   /**
    * An array of all track ids. Each id is associated with a `cdkDropList` for the
@@ -78,4 +97,6 @@ export class ListComponent implements OnInit {
     cards = [...cards.sort((a: any, b: any) => (asc) * (new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()))];
     console.log(cards);
   }
+
+
 }
