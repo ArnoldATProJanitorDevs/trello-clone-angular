@@ -1,6 +1,21 @@
 $dialog-default-padding: 24px;
 $edit-card-dialog-width: 400px;
 
+.card-list {
+  // Stretch the element to the height of the board and make it scrollable.
+  height: 100%;
+  width: 264px;
+  overflow: auto;
+  box-sizing: border-box;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+  // Some extra styling to make the card list look better.
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  padding: 8px;
+}
+
 img {
   width: $edit-card-dialog-width;
 

@@ -1,4 +1,4 @@
-import { IssueType } from './models/schema.model';
+import {IssueType} from './models/enum.models';
 
 export const appConstants = {
 

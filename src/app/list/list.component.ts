@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import {Board, Card, List} from '../shared/models/schema.model';
+import {Card, List} from '../shared/models/schema.model';
 import {EditCardComponent} from '../edit-card/edit-card.component';
 import {DeleteCardComponent} from '../delete-card/delete-card.component';
-import {BoardService} from '../board.service';
 import {MatDialog} from '@angular/material/dialog';
 import {DateService} from '../shared/services/date.service';
 
@@ -14,38 +13,36 @@ import {DateService} from '../shared/services/date.service';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  board: Board = undefined;
+  @Input() lists: List[];
 
-  constructor(private _boardService: BoardService,
-              private _dialog: MatDialog,
+
+  constructor(private _dialog: MatDialog,
               public dateService: DateService,
   ) {
-    this.board = this._boardService.getBoard();
   }
 
   ngOnInit(): void {
-    this.addDateEachDay(this.dateService.getDaysOfWeek(new Date()));
+    this.addDateEachDay(this.dateService.getLocaleDateFormat(new Date()));
   }
 
-  addDateEachDay(daysOfWeek: any[]) {
+  addDateEachDay(daysOfWeek: string[]) {
 
-    this.board.lists = this.board.lists.map((x,i) => {
+    this.lists = this.lists.map((x, i) => {
        return {
           cards: x.cards,
           id: x.id,
-          title:  i < daysOfWeek.length - 1 ? daysOfWeek[i] : x.title
+          title:  i < daysOfWeek.length - 1 ? daysOfWeek[i] : x.title,
         } as List;
       }
     );
   }
 
-
   /**
    * An array of all track ids. Each id is associated with a `cdkDropList` for the
    * track talks. This property can be used to connect all drop lists together.
    */
-  trackIds(boardIndex): string[] {
-    return this.board.lists.map(card => card.id);
+  trackIds(listIndex): string[] {
+    return this.lists.map(card => card.id);
   }
 
   onCardDrop(event: CdkDragDrop<Card[]>) {

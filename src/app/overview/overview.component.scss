@@ -1,0 +1,56 @@
+.overview {
+  max-width: 1848px;
+  margin: auto;
+}
+
+.overview {
+  app-card{
+    width: 100%;
+  }
+}
+
+span {
+  padding-left: 10px;
+}
+
+.card-list {
+  // Stretch the element to the height of the board and make it scrollable.
+  width: 98vw;
+  overflow: auto;
+  box-sizing: border-box;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+  // Some extra styling to make the card list look better.
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+
+.card-list {
+  // Makes it possible for the ` card-list-content ` to take up the remaining space . display:flex;
+  flex-direction: row;
+  margin: auto;
+  max-width: 1848px;
+
+
+  h2 {
+    // Extra spacing to make things look better . margin-bottom:5 px;
+  }
+
+  .add-card {
+    // The flex-shrink prevents the button from shrinking if the list content becomes too large . flex-shrink:0;
+    margin-top: 10px;
+  }
+
+}
+
+.card-list-content {
+  // Make the list scrollable and stretch it to take up the available height.
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  overflow-y: hidden;
+  flex-grow: 1;
+}

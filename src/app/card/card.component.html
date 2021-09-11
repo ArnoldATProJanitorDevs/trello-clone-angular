@@ -17,11 +17,11 @@
       </mat-chip-list>
     </div>
 
-    <mat-icon (click)="delete.next()" class="icon">cancel_outline</mat-icon>
+    <mat-icon *ngIf="editable" (click)="delete.next()" class="icon">cancel_outline</mat-icon>
   </mat-card-content>
 
   <!-- Section for buttons and the talk author. -->
-  <mat-card-actions>
+  <mat-card-actions *ngIf="editable">
     <!-- <button mat-button (click)="delete.next()">DELETE</button> -->
     <button mat-button (click)="edit.next()">EDIT</button>
   </mat-card-actions>

@@ -8,16 +8,15 @@ export class DateService {
   constructor() {
   }
 
-
-  getDaysOfWeek(current) {
+  getLocaleDateFormat(current,
+                      locale = 'en-GB',
+                      options = {weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric'}) {
     const week = [];
-    const options = {weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric'};
     // Starting Monday not Sunday
     current.setDate((current.getDate() - current.getDay() + 1));
     for (let i = 0; i < 7; i++) {
-      week.push(current.toLocaleDateString('en-GB', options));
+      week.push(current.toLocaleDateString(locale, options));
       current.setDate(current.getDate() + 1);
-
     }
     return week;
   }

@@ -1,10 +1,10 @@
-<div class="board" cdkDropList [cdkDropListData]="board.lists"
+<div class="board" cdkDropList [cdkDropListData]="lists"
      (cdkDropListDropped)="onListDrop($event)"
      cdkDropListOrientation="horizontal">
 
-  <div cdkDrag class="card-list mat-elevation-z1" *ngFor="let list of board.lists; let listIndex = index;">
+  <div cdkDrag class="card-list mat-elevation-z1" *ngFor="let list of lists; let listIndex = index;">
     <div class="row" fxLayoutAlign="start center">
-      <h2 fxFlex="80" class="mat-h2"><span contenteditable [textContent]="list?.title"
+      <h2 fxFlex="80" class="mat-h2"><span [textContent]="list?.title"
                                            (input)="list.title=$event.target.textContent"></span></h2>
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" cdkDragHandle>
         <!-- Filter Menu Starts Here-->
@@ -33,11 +33,18 @@
          [cdkDropListConnectedTo]="trackIds(listIndex)"
          (cdkDropListDropped)="onCardDrop($event)">
 
-      <app-card *ngFor="let card of list.cards" [text]="card.text" [createdAt]="card?.createdAt" [tags]="card.tags"
-                [issueType]="card?.issueType" [author]="card.speaker"
-                [image]="card.image" cdkDrag (edit)="addEditCard(card, list, true)"
-                (delete)="deleteCard(card, list)">
-
+      <app-card *ngFor="let card of list.cards"
+                [editable]=true
+                [text]="card.text"
+                [createdAt]="card?.createdAt"
+                [tags]="card.tags"
+                [issueType]="card?.issueType"
+                [author]="card.speaker"
+                [image]="card.image"
+                cdkDrag
+                (edit)="addEditCard(card, list, true)"
+                (delete)="deleteCard(card, list)"
+      >
       </app-card>
 
     </div>

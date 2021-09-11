@@ -1,0 +1,15 @@
+<div class="overview">
+  <div class="card-list mat-elevation-z1">
+    <div class="row" fxLayoutAlign="start center">
+      <h2 fxFlex="10" class="mat-h2"><span [textContent]="title"></span></h2>
+      <div fxFlex="90" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+        <div  class="card-list-content" fxLayoutGap="5px">
+          <app-card  *ngFor="let overview of weeklyStats"
+                     [text]="overview.title + ' ' + overview.value"
+          >
+          </app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

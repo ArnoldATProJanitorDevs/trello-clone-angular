@@ -1,5 +1,35 @@
 {
   "title": "Weekly Board",
+  "epics" : [
+    {
+      "title": "Epic 1",
+      "description": "This is Epic One",
+      "estimatedHours": "5",
+      "tags": [],
+      "priority": "A"
+    },
+    {
+      "title": "Epic 2",
+      "description": "This is Epic Two",
+      "estimatedHours": "3",
+      "tags": [],
+      "priority": "B"
+    },
+    {
+      "title": "Epic 3",
+      "description": "This is Epic Three",
+      "estimatedHours": "1",
+      "tags": [],
+      "priority": "C"
+    },
+    {
+      "title": "Epic 4",
+      "description": "This is Epic Four",
+      "estimatedHours": "0.5",
+      "tags": [],
+      "priority": "D"
+    }
+  ],
   "lists": [
     {
       "id": "mon",
@@ -285,6 +315,20 @@
       "id": "fin",
       "title": "Finished",
       "cards": []
+    }
+  ],
+  "weeklyStats" : [
+    {
+      "title": "Hours Worked",
+      "value": "22"
+    },
+    {
+      "title": "Epics Done",
+      "value": "0"
+    },
+    {
+      "title": "Tasks Done",
+      "value": "12"
     }
   ]
 }

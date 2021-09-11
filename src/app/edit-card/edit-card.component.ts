@@ -3,7 +3,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef, MatDialog} from '@angular/material/dialog';
 import { ColorPickerDialogComponent } from '../shared/components/color-picker-dialog/color-picker-dialog.component';
-import { IssueType, Card } from '../shared/models/schema.model';
+import { Card } from '../shared/models/schema.model';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { appConstants } from '../shared/appConstants';
 

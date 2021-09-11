@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { appConstants } from '../shared/appConstants';
-import { IssueType } from '../shared/models/schema.model';
+import {IssueType} from '../shared/models/enum.models';
 
 @Component({
   selector: 'app-card',
@@ -13,6 +13,7 @@ export class CardComponent implements OnInit {
   issueTypes = Object.values(IssueType);
   @Output() edit = new EventEmitter<void>();
   @Output() delete = new EventEmitter<void>();
+  @Input() editable = false;
   @Input() text: string;
   @Input() author: string;
   @Input() tags: [];

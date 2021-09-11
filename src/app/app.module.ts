@@ -28,6 +28,8 @@ import { ColorPickerDialogComponent } from './shared/components/color-picker-dia
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { ListComponent } from './list/list.component';
+import { EpicComponent } from './epic/epic.component';
+import { OverviewComponent } from './overview/overview.component';
 
 
 
@@ -39,7 +41,9 @@ import { ListComponent } from './list/list.component';
     EditCardComponent,
     DeleteCardComponent,
     ColorPickerDialogComponent,
-    ListComponent
+    ListComponent,
+    EpicComponent,
+    OverviewComponent
   ],
   imports: [
     CommonModule,
