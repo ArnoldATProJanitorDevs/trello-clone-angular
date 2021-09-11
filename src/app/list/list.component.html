@@ -35,7 +35,7 @@
 
       <app-card *ngFor="let card of list.cards"
                 [editable]=true
-                [text]="card.text"
+                [title]="card.text"
                 [createdAt]="card?.createdAt"
                 [tags]="card.tags"
                 [issueType]="card?.issueType"

@@ -23,7 +23,6 @@ export enum MaxTasksPerEpic {
   pro = 100,
 }
 
-
 export enum Priority {
   A = 'A',
   B = 'B',

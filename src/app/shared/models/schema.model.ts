@@ -30,6 +30,8 @@ export interface Epic {
   estimatedHours?: number;
   tags?: Tag;
   priority: Priority;
+  createdAt: string;
+  issueType?: IssueType;
 }
 
 export interface List {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { appConstants } from '../shared/appConstants';
-import {IssueType} from '../shared/models/enum.models';
+import {IssueType, Priority} from '../shared/models/enum.models';
 
 @Component({
   selector: 'app-card',
@@ -10,16 +10,19 @@ import {IssueType} from '../shared/models/enum.models';
 export class CardComponent implements OnInit {
 
   issueTypesWithColor = appConstants.issueTypeListWithColor;
-  issueTypes = Object.values(IssueType);
+  prioritiesWithColor = appConstants.priorityList;
   @Output() edit = new EventEmitter<void>();
   @Output() delete = new EventEmitter<void>();
   @Input() editable = false;
-  @Input() text: string;
+  @Input() title: string;
+  @Input() description: string;
   @Input() author: string;
   @Input() tags: [];
   @Input() image: string;
   @Input() issueType?: string;
+  @Input() priority?: string;
   @Input() createdAt: Date;
+  backgroundColor: string;
 
   constructor() { }
 

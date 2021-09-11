@@ -30,6 +30,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ListComponent } from './list/list.component';
 import { EpicComponent } from './epic/epic.component';
 import { OverviewComponent } from './overview/overview.component';
+import { EditEpicComponent } from './edit-epic/edit-epic.component';
 
 
 
@@ -39,11 +40,13 @@ import { OverviewComponent } from './overview/overview.component';
     DrawerComponent,
     CardComponent,
     EditCardComponent,
+    EditEpicComponent,
     DeleteCardComponent,
     ColorPickerDialogComponent,
     ListComponent,
     EpicComponent,
-    OverviewComponent
+    OverviewComponent,
+    EditEpicComponent,
   ],
   imports: [
     CommonModule,

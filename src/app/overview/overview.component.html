@@ -5,7 +5,7 @@
       <div fxFlex="90" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
         <div  class="card-list-content" fxLayoutGap="5px">
           <app-card  *ngFor="let overview of weeklyStats"
-                     [text]="overview.title + ' ' + overview.value"
+                     [title]="overview.title + ' ' + overview.value"
           >
           </app-card>
         </div>

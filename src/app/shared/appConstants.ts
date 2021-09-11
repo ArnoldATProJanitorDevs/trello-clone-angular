@@ -1,4 +1,4 @@
-import {IssueType} from './models/enum.models';
+import {IssueType, Priority} from './models/enum.models';
 
 export const appConstants = {
 
@@ -24,5 +24,23 @@ export const appConstants = {
             name: IssueType.SubTask,
             color: '#3d7e9a4d'
         }
+    },
+    priorityList: {
+      [Priority.A]: {
+        name: 'A',
+        color: '#99333352'
+      },
+      [Priority.B]: {
+        name: 'B',
+        color: '#fff3d4'
+      },
+      [Priority.C]: {
+        name: 'C',
+        color: '#33996652'
+      },
+      [Priority.D]: {
+        name: 'D',
+        color: '#3d7e9a4d'
+      }
     }
 };

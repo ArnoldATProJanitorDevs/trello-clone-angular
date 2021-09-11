@@ -26,7 +26,6 @@ export class ListComponent implements OnInit {
   }
 
   addDateEachDay(daysOfWeek: string[]) {
-
     this.lists = this.lists.map((x, i) => {
        return {
           cards: x.cards,

@@ -1,22 +1,18 @@
-<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
-  <img *ngIf="data?.card.image" [src]="data?.card.image" alt="Card image preview">
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" fxFlex="100" fxLayout="column" fxLayoutAlign="start">
   <mat-form-field>
-    <label>Card description</label>
-    <textarea cdkTextareaAutosize cdkAutosizeMinRows="3" matInput placeholder="Card description" required formControlName="text"></textarea>
+    <input matInput placeholder="Epic Title" required formControlName="title">
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Issue Type</mat-label>
-    <mat-select formControlName="issueType">
-      <mat-option [style.background]="i.color" *ngFor="let i of issueTypesArrayWithColor" [value]="i.name">
-        {{i.name}}
-      </mat-option>
-    </mat-select>
+    <mat-label>Description</mat-label>
+    <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" matInput placeholder="Detailed description for your epic." formControlName="description"></textarea>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Speaker" required formControlName="speaker">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Image URL" formControlName="image">
+    <mat-label>Priority</mat-label>
+  <mat-select formControlName="priority">
+    <mat-option [style.background]="i.color" *ngFor="let i of priorities" [value]="i.name">
+      {{i.name}}
+    </mat-option>
+  </mat-select>
   </mat-form-field>
   <mat-form-field>
     <!-- Add the chip list and associate it with a new form control. -->
@@ -28,7 +24,7 @@
       <mat-chip [style.background]="tag?.color ? tag.color : '#e0e0e0'"
                 *ngFor="let tag of this.formGroup.get('tags').value" (removed)="removeTag(tag)">
         {{tag?.name}}
-        <!-- Add an icon that allows the user to delete a card via click. -->
+        <!-- Add an icon that allows the user to delete a epic via click. -->
         <mat-icon (click)="openColorPickerDialog(tag)"
                   class="mat-icon notranslate mat-chip-remove mat-chip-trailing-icon material-icons mat-icon-no-color">
           color_lense
