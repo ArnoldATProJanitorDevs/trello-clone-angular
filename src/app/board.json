@@ -12,7 +12,7 @@
         {
           "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
           "issueType": "epic",
-          "text": "Keynote addess",
+          "title": "Keynote addess",
           "speaker": "Igor Minar",
           "createdAt": "2018-01-01T09:26:05.026Z",
           "image": "https://i.ytimg.com/vi/7Bj4R7lGl4A/maxresdefault.jpg",
@@ -32,7 +32,7 @@
         {
           "id": "9b1deb4d-3b7d-4bad-1abf-2b0d7b3dcb6d",
           "issueType": "bug",
-          "text": "VS Code Can Do That",
+          "title": "VS Code Can Do That",
           "speaker": "John Papa",
           "createdAt": "2020-02-01T09:26:05.026Z",
           "linkedEpic": {
@@ -92,7 +92,7 @@
         {
           "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
           "issueType": "epic",
-          "text": "Keynote addess",
+          "title": "Keynote addess",
           "speaker": "Igor Minar",
           "createdAt": "2018-01-01T09:26:05.026Z",
           "image": "https://i.ytimg.com/vi/7Bj4R7lGl4A/maxresdefault.jpg",
@@ -112,7 +112,7 @@
         {
           "id": "9b1deb4d-3b7d-4bad-1abf-2b0d7b3dcb6d",
           "issueType": "bug",
-          "text": "VS Code Can Do That",
+          "title": "VS Code Can Do That",
           "speaker": "John Papa",
           "createdAt": "2020-02-01T09:26:05.026Z",
           "linkedEpic": {
@@ -137,14 +137,14 @@
         {
           "id": "9b1deb4d-99dbv-4bad-1abf-2b0d7b3dcb6d",
           "issueType": "sub-task",
-          "text": "How to save time & money by planning your ngUpgrade",
+          "title": "How to save time & money by planning your ngUpgrade",
           "speaker": "Sam Julien",
           "createdAt": "2019-03-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-99dbv-84da-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "How to AI in JS?",
+          "title": "How to AI in JS?",
           "speaker": "Asim Hussain",
           "createdAt": "2020-04-01T09:26:05.026Z",
           "tags": [
@@ -157,35 +157,35 @@
         {
           "id": "9b1deb4d-88eq-84da-1abf-2b0d7b3dcb6d",
           "issueType": "story",
-          "text": "You Might Not Need NgRx",
+          "title": "You Might Not Need NgRx",
           "speaker": "Michael Ryan",
           "createdAt": "2020-05-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-88eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "story",
-          "text": "Upgrading to Angular without ngUpgrade",
+          "title": "Upgrading to Angular without ngUpgrade",
           "speaker": "Erin Coughlan",
           "createdAt": "2020-06-01T09:26:05.026Z"
         },
         {
           "id": "8b4deb4d-88eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Why you need a build system, and why it should be Bazel",
+          "title": "Why you need a build system, and why it should be Bazel",
           "speaker": "Martin Probst",
           "createdAt": "2020-07-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-89eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "The theory of Angular Ivy",
+          "title": "The theory of Angular Ivy",
           "speaker": "Alex Rickabaugh",
           "createdAt": "2020-08-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-88eq-9154a-8711-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Building an Angular PWA: Angular Service Worker or Workbox?",
+          "title": "Building an Angular PWA: Angular Service Worker or Workbox?",
           "speaker": "Maxim Salnikov",
           "createdAt": "2020-09-01T09:26:05.026Z",
           "tags": [
@@ -198,7 +198,7 @@
         {
           "id": "9b1deb4d-88eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Angular Unit Testing - how to win friends, design better code, and get rich quick!",
+          "title": "Angular Unit Testing - how to win friends, design better code, and get rich quick!",
           "speaker": "Shai Reznik",
           "createdAt": "2020-10-01T09:26:05.026Z"
         }
@@ -211,14 +211,14 @@
         {
           "id": "9b1deb4d-10eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "bug",
-          "text": "Automating UI development",
+          "title": "Automating UI development",
           "speaker": "Stefan Baumgartner and Katrin Freihofner",
           "createdAt": "2020-11-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-11eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "epic",
-          "text": "RxJS schedulers in depth",
+          "title": "RxJS schedulers in depth",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/London_Thames_Sunset_panorama_-_Feb_2008.jpg/640px-London_Thames_Sunset_panorama_-_Feb_2008.jpg",
           "speaker": "Michael Hladky",
           "createdAt": "2020-12-01T09:26:05.026Z",
@@ -232,7 +232,7 @@
         {
           "id": "9b1deb4d-19eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "sub-task",
-          "text": "The good, the bad and the ugly - Component architecture at scale",
+          "title": "The good, the bad and the ugly - Component architecture at scale",
           "speaker": "Ana Cidre and Sherry List",
           "createdAt": "2019-01-01T09:26:05.026Z",
           "tags": [
@@ -245,7 +245,7 @@
         {
           "id": "9b1deb4d-22eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "story",
-          "text": "Universally speaking",
+          "title": "Universally speaking",
           "speaker": "Craig Spence",
           "createdAt": "2019-02-01T09:26:05.026Z",
           "tags": [
@@ -258,7 +258,7 @@
         {
           "id": "9b1deb4d-25eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Optimize and debug change detection like a pro",
+          "title": "Optimize and debug change detection like a pro",
           "speaker": "Max Koretskyi",
           "createdAt": "2019-03-01T09:26:05.026Z",
           "tags": [
@@ -271,7 +271,7 @@
         {
           "id": "9b1deb4d-30eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Nest the backend for your Angular application",
+          "title": "Nest the backend for your Angular application",
           "speaker": "Bo Vandersteene",
           "createdAt": "2019-04-01T09:26:05.026Z",
           "tags": [
@@ -284,7 +284,7 @@
         {
           "id": "9b1deb4d-36eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Testing Angular with Cypress.io",
+          "title": "Testing Angular with Cypress.io",
           "speaker": "Joe Eames",
           "createdAt": "2019-05-01T09:26:05.026Z",
           "tags": [
@@ -297,7 +297,7 @@
         {
           "id": "9b1deb4d-39eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Location based immersive experiences with Angular and WebXR",
+          "title": "Location based immersive experiences with Angular and WebXR",
           "speaker": "Aysegul Yonet",
           "createdAt": "2019-06-01T09:26:05.026Z"
         }
@@ -310,14 +310,14 @@
         {
           "id": "9b1deb4d-40eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Deep dive into Angular CLI 7",
+          "title": "Deep dive into Angular CLI 7",
           "speaker": "Noël Macé",
           "createdAt": "2019-07-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-41eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Angular Material workshop",
+          "title": "Angular Material workshop",
           "speaker": "Kristiyan Kostadinov and Paul Gschwendtner",
           "createdAt": "2019-08-01T09:26:05.026Z",
           "image": "https://pbs.twimg.com/media/DoRVQNuXUAAg7Zt.jpg"
@@ -325,7 +325,7 @@
         {
           "id": "9b1deb4d-42eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "#UseThePlatform with Stencil and Angular",
+          "title": "#UseThePlatform with Stencil and Angular",
           "speaker": "Gil Fink",
           "createdAt": "2019-09-01T09:26:05.026Z"
         }
@@ -338,26 +338,26 @@
         {
           "id": "9b1deb4d-44eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Stefan Baumgartner, Michael Hladky, Katrin Freihofner, Igor Minar",
+          "title": "Stefan Baumgartner, Michael Hladky, Katrin Freihofner, Igor Minar",
           "createdAt": "2019-10-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-45eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Ana Cidre, Sam Julien, Sherry List, Noël Macé, Michael Ryan",
+          "title": "Ana Cidre, Sam Julien, Sherry List, Noël Macé, Michael Ryan",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/640px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg",
           "createdAt": "2019-10-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-46eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Sani Yusuf, Craig Spence, Maxim Salnikov, Olivier Combe, Misko Hevery",
+          "title": "Sani Yusuf, Craig Spence, Maxim Salnikov, Olivier Combe, Misko Hevery",
           "createdAt": "2019-11-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-47eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Erin Coughlan, Martin Probst, Max Koretskyi, Bo Vandersteene",
+          "title": "Erin Coughlan, Martin Probst, Max Koretskyi, Bo Vandersteene",
           "createdAt": "2019-12-01T09:26:05.026Z"
         }
       ]
@@ -369,21 +369,21 @@
         {
           "id": "9b1deb4d-48eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Upgrade",
+          "title": "Upgrade",
           "speaker": "Elana Olson, Erin Coughlan, Sam Julien",
           "createdAt": "2019-01-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-49eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "UI",
+          "title": "UI",
           "speaker": "Shmuela Jacobs, Ana Cidre, Sherry List, Kristiyan Kostadinov, Paul Gschwendtner, Katrin Freihofner",
           "createdAt": "2019-02-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-50eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Ivy",
+          "title": "Ivy",
           "speaker": "Alex Rickabaugh, Jason Aden, Olivier Combe, Igor Minar, Misko Hevery",
           "createdAt": "2019-03-01T09:26:05.026Z",
           "image": "https://pbs.twimg.com/media/DoHCNnlUUAUWfhG.jpg"
@@ -397,26 +397,26 @@
         {
           "id": "9b1deb4d-51eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Stefan Baumgartner, Michael Hladky, Katrin Freihofner, Igor Minar",
+          "title": "Stefan Baumgartner, Michael Hladky, Katrin Freihofner, Igor Minar",
           "createdAt": "2019-10-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-52eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Ana Cidre, Sam Julien, Sherry List, Noël Macé, Michael Ryan",
+          "title": "Ana Cidre, Sam Julien, Sherry List, Noël Macé, Michael Ryan",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/640px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg",
           "createdAt": "2019-10-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-53eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Sani Yusuf, Craig Spence, Maxim Salnikov, Olivier Combe, Misko Hevery",
+          "title": "Sani Yusuf, Craig Spence, Maxim Salnikov, Olivier Combe, Misko Hevery",
           "createdAt": "2019-11-01T09:26:05.026Z"
         },
         {
           "id": "9b1deb4d-54eq-9154a-1abf-2b0d7b3dcb6d",
           "issueType": "task",
-          "text": "Erin Coughlan, Martin Probst, Max Koretskyi, Bo Vandersteene",
+          "title": "Erin Coughlan, Martin Probst, Max Koretskyi, Bo Vandersteene",
           "createdAt": "2019-12-01T09:26:05.026Z"
         }
       ]

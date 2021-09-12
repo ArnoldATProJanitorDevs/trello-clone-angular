@@ -44,7 +44,8 @@ export interface List {
 
 export interface Card {
   id: string;
-  text: string;
+  title: string;
+  description: string;
   speaker?: string;
   tags?: Tag[];
   image?: string;

@@ -1,8 +1,12 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <img *ngIf="data?.card.image" [src]="data?.card.image" alt="Card image preview">
   <mat-form-field>
+    <input matInput placeholder="Card's Title" required
+           formControlName="title">
+  </mat-form-field>
+  <mat-form-field>
     <textarea cdkTextareaAutosize cdkAutosizeMinRows="3" matInput placeholder="Card description" required
-              formControlName="text"></textarea>
+              formControlName="description"></textarea>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Issue Type</mat-label>

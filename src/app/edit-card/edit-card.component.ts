@@ -28,7 +28,8 @@ export class EditCardComponent implements OnInit {
   ngOnInit() {
     const card = this.data && this.data.card ? this.data.card : null;
     this.formGroup = this.formBuilder.group({
-      text: [card && card.text ? card.text : '', Validators.required],
+      title: [card && card.title ? card.title : '', Validators.required],
+      description: [card && card.description ? card.description : ''],
       speaker: [card && card.speaker ? card.speaker : '', Validators.required],
       image: [card && card.image ? card.image : ''],
       tags: [card && card.tags ? card.tags : []],
