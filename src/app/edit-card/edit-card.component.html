@@ -1,7 +1,6 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <img *ngIf="data?.card.image" [src]="data?.card.image" alt="Card image preview">
   <mat-form-field>
-    <label>Card description</label>
     <textarea cdkTextareaAutosize cdkAutosizeMinRows="3" matInput placeholder="Card description" required
               formControlName="text"></textarea>
   </mat-form-field>
@@ -46,7 +45,8 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>Attach to Epic</mat-label>
-    <mat-select formControlName="linkToEpic" [(value)]="data.card.linkedEpic">
+    <mat-select formControlName="linkToEpic" [(ngModel)]="data.card.linkedEpic" [compareWith]="compareCategoryObjects">
+      <mat-option>None</mat-option>
       <mat-option *ngFor="let epic of data.epics" [value]="epic">{{epic.title}}</mat-option>
     </mat-select>
   </mat-form-field>
