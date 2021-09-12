@@ -6,7 +6,6 @@ import {DeleteCardComponent} from '../delete-card/delete-card.component';
 import {MatDialog} from '@angular/material/dialog';
 import {DateService} from '../shared/services/date.service';
 import {CommonFunctionsService} from '../shared/services/common-functions.service';
-import {Priority} from '../shared/models/enum.models';
 
 @Component({
   selector: 'app-list',
@@ -58,10 +57,21 @@ export class ListComponent implements OnInit {
         event.previousIndex,
         event.currentIndex);
     }
+
+    if (event.container.id === this.lists[this.lists.length - 1].id) {
+       this.setFinishState(event.container.data[0], true);
+    } else {
+      this.setFinishState(event.container.data[0], false);
+    }
+
   }
 
   onListDrop(event: CdkDragDrop<List[]>) {
     moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+  }
+
+  setFinishState(card: Card, state: boolean) {
+    card.finished = state;
   }
 
   addEditCard(card: Card, list: List, edit = false) {

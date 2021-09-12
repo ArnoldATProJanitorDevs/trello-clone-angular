@@ -46,6 +46,7 @@ export interface Card {
   id: string;
   title: string;
   description: string;
+  finished: boolean;
   speaker?: string;
   tags?: Tag[];
   image?: string;

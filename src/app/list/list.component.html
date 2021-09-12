@@ -33,8 +33,9 @@
          [cdkDropListConnectedTo]="trackIds(listIndex)"
          (cdkDropListDropped)="onCardDrop($event)">
 
-      <app-card *ngFor="let card of list.cards"
-                [id] = card.id
+      <app-card cdkDrag *ngFor="let card of list.cards"
+                [id]=card.id
+                [finished]=card.finished
                 [editable]=true
                 [title]="card.title"
                 [description]="card.description"
@@ -44,12 +45,10 @@
                 [author]="card.speaker"
                 [image]="card.image"
                 [linkedEpic]="card.linkedEpic"
-                cdkDrag
                 (edit)="addEditCard(card, list, true)"
                 (delete)="deleteCard(card, list)"
       >
       </app-card>
-
     </div>
 
     <!-- footer of list -->

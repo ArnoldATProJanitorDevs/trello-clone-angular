@@ -14,7 +14,8 @@ export class CardComponent implements OnInit {
   @Output() edit = new EventEmitter<void>();
   @Output() delete = new EventEmitter<void>();
   @Output() highlight = new EventEmitter<Card>();
-  @Input() id?: string;
+  @Input() id: string;
+  @Input() finished: boolean;
   @Input() editable = false;
   @Input() title: string;
   @Input() description: string;
@@ -33,6 +34,7 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.finished ? this.finished : false;
   }
 
 

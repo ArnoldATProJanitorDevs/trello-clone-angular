@@ -25,7 +25,7 @@
     <div *ngIf="linkedEpic">
       <mat-label>Linked Epic</mat-label>
       <mat-chip-list>
-        <mat-chip  selectable="false">{{linkedEpic.title}}</mat-chip>
+        <mat-chip selectable="false">{{linkedEpic.title}}</mat-chip>
       </mat-chip-list>
     </div>
 
@@ -38,6 +38,9 @@
     </div>
 
     <mat-icon *ngIf="editable" (click)="delete.next()" class="icon">cancel_outline</mat-icon>
+    <div [hidden]="!finished">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    </div>
   </mat-card-content>
 
 
