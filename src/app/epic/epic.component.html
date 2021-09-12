@@ -8,12 +8,15 @@
       <div fxFlex="90" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
         <div class="card-list-content" fxLayoutGap="5px">
           <app-card *ngFor="let epic of sortBy(epics, 'priority')"
+                    [id] = epic.id
                     [editable]=true
                     [title]="epic.title"
                     [description]="epic.description"
                     (edit)="addEditEpic(epic, true)"
                     (delete)="deleteEpic(epic)"
                     [priority]="epic.priority"
+                    [linkedCards]="epic.linkedCards"
+                    (highlight)="highlightCard($event)"
           >
           </app-card>
         </div>

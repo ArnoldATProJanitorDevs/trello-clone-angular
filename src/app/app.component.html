@@ -1,6 +1,6 @@
 <app-drawer>
   <app-epic [epics]="board.epics"></app-epic>
-  <app-list class="app-list" [lists]="board.lists"></app-list>
+  <app-list class="app-list" [epics]= "board.epics" [lists]="board.lists"></app-list>
   <app-overview [weeklyStats]="board.weeklyStats"></app-overview>
 </app-drawer>
 

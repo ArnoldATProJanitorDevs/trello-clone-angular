@@ -25,6 +25,7 @@ export interface Board {
 }
 
 export interface Epic {
+  id: string;
   title: string;
   description: string;
   estimatedHours?: number;
@@ -32,6 +33,7 @@ export interface Epic {
   priority: Priority;
   createdAt: string;
   issueType?: IssueType;
+  linkedCards?: Card[];
 }
 
 export interface List {
@@ -41,12 +43,14 @@ export interface List {
 }
 
 export interface Card {
+  id: string;
   text: string;
   speaker?: string;
   tags?: Tag[];
   image?: string;
   createdAt?: Date;
   issueType?: IssueType;
+  linkedEpic?: Epic;
 }
 
 

@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { appConstants } from '../shared/appConstants';
-import {IssueType, Priority} from '../shared/models/enum.models';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {appConstants} from '../shared/appConstants';
+import {Card, Epic} from '../shared/models/schema.model';
 
 @Component({
   selector: 'app-card',
@@ -13,6 +13,8 @@ export class CardComponent implements OnInit {
   prioritiesWithColor = appConstants.priorityList;
   @Output() edit = new EventEmitter<void>();
   @Output() delete = new EventEmitter<void>();
+  @Output() highlight = new EventEmitter<Card>();
+  @Input() id?: string;
   @Input() editable = false;
   @Input() title: string;
   @Input() description: string;
@@ -22,9 +24,13 @@ export class CardComponent implements OnInit {
   @Input() issueType?: string;
   @Input() priority?: string;
   @Input() createdAt: Date;
+  @Input() linkedCards?: Card[];
+  @Input() linkedEpic?: Epic;
+
   backgroundColor: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

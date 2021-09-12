@@ -2,7 +2,8 @@
   <img *ngIf="data?.card.image" [src]="data?.card.image" alt="Card image preview">
   <mat-form-field>
     <label>Card description</label>
-    <textarea cdkTextareaAutosize cdkAutosizeMinRows="3" matInput placeholder="Card description" required formControlName="text"></textarea>
+    <textarea cdkTextareaAutosize cdkAutosizeMinRows="3" matInput placeholder="Card description" required
+              formControlName="text"></textarea>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Issue Type</mat-label>
@@ -43,11 +44,18 @@
       <input placeholder="Add tags" [matChipInputFor]="tags" (matChipInputTokenEnd)="addTag($event)"/>
     </mat-chip-list>
   </mat-form-field>
+  <mat-form-field>
+    <mat-label>Attach to Epic</mat-label>
+    <mat-select formControlName="linkToEpic" [(value)]="data.card.linkedEpic">
+      <mat-option *ngFor="let epic of data.epics" [value]="epic">{{epic.title}}</mat-option>
+    </mat-select>
+  </mat-form-field>
   <mat-dialog-actions align="end">
     <!--
         mat-dialog-close is a directive from the `MatDialogModule` which can be used
         to close the current dialog in a declarative way on element click.
       -->
+    <button mat-button (click)="removeEpic()">Remove Epic</button>
     <button mat-button mat-dialog-close>Cancel</button>
 
     <button mat-button type="submit" [disabled]="formGroup.invalid">{{data?.edit ? 'Update' : 'Add'}}</button>

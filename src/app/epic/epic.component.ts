@@ -25,7 +25,8 @@ export class EpicComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  sortBy(toSort:any[], prop: string) {
+
+  sortBy(toSort: any[], prop: string) {
     return this._commonFunctions.sortBy(toSort, prop);
   }
 
@@ -57,4 +58,19 @@ export class EpicComponent implements OnInit {
       });
   }
 
+  highlightCard($event: Card) {
+    const HTMLElement = document.getElementById($event.id);
+    const originColor = HTMLElement.style.backgroundColor;
+    const epic = this.epics.find(e => {
+      return e.linkedCards.find(lc => lc.id === $event.id);
+    });
+
+    const epicHTMLElementBGColor = this._commonFunctions.rgba2hex(document.getElementById(epic.id).style.backgroundColor);
+
+    HTMLElement.style.border = '10px solid #' + epicHTMLElementBGColor;
+
+    setTimeout(() => {
+      HTMLElement.style.border = 'none';
+    }, 1500, originColor);
+  }
 }

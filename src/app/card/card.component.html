@@ -1,4 +1,4 @@
-<mat-card (click)="edit.next()" class="card"
+<mat-card id="{{id}}" (click)="edit.next()" class="card"
           [style.backgroundColor]="this.issueTypesWithColor[this.issueType]?.color || this.prioritiesWithColor[this.priority]?.color">
   <!-- mat-card allows us to optionally provide a card image. -->
   <img *ngIf="image" mat-card-image [src]="image" draggable="false">
@@ -19,6 +19,21 @@
       <mat-chip-list>
         <mat-chip [style.background]="tag?.color ? tag.color : '#e0e0e0'" *ngFor="let tag of tags"
                   selectable="false">{{tag?.name}}</mat-chip>
+      </mat-chip-list>
+    </div>
+
+    <div *ngIf="linkedEpic">
+      <mat-label>Linked Epic</mat-label>
+      <mat-chip-list>
+        <mat-chip  selectable="false">{{linkedEpic.title}}</mat-chip>
+      </mat-chip-list>
+    </div>
+
+    <div *ngIf="linkedCards">
+      <mat-label *ngIf="linkedCards.length > 0">Linked Cards</mat-label>
+      <mat-chip-list>
+        <mat-chip *ngFor="let linkedCard of linkedCards"
+                  selectable="false" (click)=highlight.next(linkedCard)>{{linkedCard.text}}</mat-chip>
       </mat-chip-list>
     </div>
 
